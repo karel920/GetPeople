@@ -71,8 +71,8 @@
 
                 <div class="inner">
                     <h2>
-                        {{ auth()->user()->withdrawn + auth()->user()->released_from_pending + auth()->user()->released }}
-                        <!-- {{ auth()->user()->money_added }} -->
+                        <!-- {{ auth()->user()->withdrawn + auth()->user()->released_from_pending + auth()->user()->released }} -->
+                        {{ auth()->user()->money_added }}
                     </h2>
                     {{-- 종합 --}}
                     <h5>累计积分</h5>
