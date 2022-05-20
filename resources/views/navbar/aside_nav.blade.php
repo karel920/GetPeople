@@ -144,6 +144,12 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a href="{{ route(App\WebRoute::AUTH_RESET_PASSWORD) }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p> 修改安全吗</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="{{ route(App\WebRoute::AUTH_PHONE) }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p> 手机绑定</p>

@@ -101,6 +101,8 @@ Route::middleware('auth')->group(function() {
         Route::post('/bank', [AuthController::class, 'bankPost'])->name(WebRoute::AUTH_BANK_POST);
         Route::get('/reset-password', [AuthController::class, 'resetPassword'])->name(WebRoute::AUTH_RESET_PASSWORD);
         Route::post('/reset-password', [AuthController::class, 'resetPasswordPost'])->name(WebRoute::AUTH_RESET_PASSWORD_POST);
+        Route::get('/reset-security', [AuthController::class, 'resetSecurity'])->name(WebRoute::AUTH_RESET_SECURITY);
+        Route::post('/reset-security', [AuthController::class, 'resetSecurityPost'])->name(WebRoute::AUTH_RESET_SECURITY_POST);
         Route::any('/phone', [AuthController::class, 'phone'])->name(WebRoute::AUTH_PHONE);
     });
 

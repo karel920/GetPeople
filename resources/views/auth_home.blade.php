@@ -35,6 +35,11 @@
                 </a>
             </div>
             <div class="item item-green">
+                <a href="{{ route(App\WebRoute::AUTH_RESET_SECURITY) }}">
+                    修改安全吗
+                </a>
+            </div>
+            <div class="item item-green">
                 <a href="{{ route(App\WebRoute::AUTH_PHONE) }}">
                     手机绑定
                 </a>

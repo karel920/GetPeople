@@ -184,6 +184,31 @@ class AuthController extends Controller
         return redirect()->back();
     }
 
+    public function resetSecurity()
+    {
+        return view('auth_reset_security');
+    }
+
+    public function resetSecurityPost(Request $request)
+    {
+        $validated = $request->validate([
+            'old_security' => 'required',
+            'security' => 'required|same:confirm_security'
+        ]);
+
+        if($validated['old_security'] != auth()->user()->security_code) {
+            flash(auth()->user()->security_code, 'danger');
+            return redirect()->back();
+        }
+
+        auth()->user()->update([
+            'security_code' => $request['security']
+        ]);
+
+        flash('密码已更新', 'success');
+        return redirect()->back();
+    }
+
     public function phone()
     {
         return view('auth_phone');

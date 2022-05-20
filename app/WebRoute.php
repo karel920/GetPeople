@@ -17,6 +17,8 @@ class WebRoute {
     public const AUTH_BANK_POST = 'auth.bank.post';
     public const AUTH_RESET_PASSWORD = 'auth.reset.password';
     public const AUTH_RESET_PASSWORD_POST = 'auth.reset.password.post';
+    public const AUTH_RESET_SECURITY = 'auth.reset.security';
+    public const AUTH_RESET_SECURITY_POST = 'auth.reset.security.post';
     public const AUTH_PHONE = 'auth.phone';
     public const AUTH_HOME = 'auth.home';
 
