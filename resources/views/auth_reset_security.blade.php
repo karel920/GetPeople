@@ -4,7 +4,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h2>修改安全吗</h2>
+                <h2>修改安全码</h2>
             </div>
         </div>
     </div>

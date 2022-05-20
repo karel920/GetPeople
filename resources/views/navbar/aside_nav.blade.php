@@ -146,7 +146,7 @@
                         <li class="nav-item">
                             <a href="{{ route(App\WebRoute::AUTH_RESET_PASSWORD) }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p> 修改安全吗</p>
+                                <p> 修改安全码</p>
                             </a>
                         </li>
                         <li class="nav-item">

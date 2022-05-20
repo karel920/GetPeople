@@ -36,7 +36,7 @@
             </div>
             <div class="item item-green">
                 <a href="{{ route(App\WebRoute::AUTH_RESET_SECURITY) }}">
-                    修改安全吗
+                    修改安全码
                 </a>
             </div>
             <div class="item item-green">
