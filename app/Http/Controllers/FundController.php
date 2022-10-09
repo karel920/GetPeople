@@ -134,7 +134,7 @@ class FundController extends Controller
             'security_code' => 'required'
         ]);
 
-        // securify challeng
+        // securify challenge
         if (!SecurityUtil::SECURITY_CHALLENGE(SecurityUtil::SECURITY_CASE_FUND_TRANSFER, $validated['security_code'])){
             flash('错误安全码', 'danger');
             return redirect()->back()->withInput();
@@ -147,10 +147,10 @@ class FundController extends Controller
             return redirect()->back()->withInput();
         }
 
-        $receiver = User::where('name', $validated['transfer_receiver'])->whereIn('id', [2, 3])->first();
+        $receiver = User::where('name', $validated['transfer_receiver'])->first();
 
         // if receiver is not a sub-company
-        if ($receiver == null) {
+        if ($receiver == null || !UserUtil::isCompany($receiver)) {
             flash('注册积分只能由个人转给分公司', 'danger');
             return redirect()->back()->withInput();
         }
